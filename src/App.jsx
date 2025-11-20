@@ -6,6 +6,8 @@ import CartBottomBar from './components/CartBottomBar';
 import CartDrawer from './components/CartDrawer';
 import GreetingPopup from './components/GreetingPopup';
 import CheckoutForm from './components/CheckoutForm';
+import SearchBar from './components/SearchBar';
+import Toast from './components/Toast';
 import menuData from './data/menu.json';
 import { CheckCircle } from 'lucide-react';
 
@@ -15,6 +17,9 @@ function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [orderPlaced, setOrderPlaced] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [toast, setToast] = useState(null);
 
   // Flatten items for easier access if needed, but we map through categories
 
@@ -26,6 +31,7 @@ function App() {
       }
       return { ...prev, [item.id]: { item, quantity: 1 } };
     });
+    setToast(`${item.name} added to cart`);
   };
 
   const handleRemove = (item) => {
@@ -92,48 +98,80 @@ function App() {
     }, 3000);
   };
 
+  // Filter menu data based on search query
+  const filteredMenuData = useMemo(() => {
+    if (!searchQuery.trim()) return menuData;
+
+    const filtered = {
+      categories: menuData.categories.map(cat => ({
+        ...cat,
+        subcategories: cat.subcategories.map(sub => ({
+          ...sub,
+          items: sub.items.filter(item =>
+            item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.description.toLowerCase().includes(searchQuery.toLowerCase())
+          )
+        })).filter(sub => sub.items.length > 0)
+      })).filter(cat => cat.subcategories.length > 0)
+    };
+
+    return filtered;
+  }, [searchQuery]);
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
   return (
     <div className="container">
       <GreetingPopup />
-      <Header />
+      {isSearchOpen && <SearchBar onSearch={handleSearch} onClose={() => { setIsSearchOpen(false); setSearchQuery(''); }} />}
+      <Header onSearchClick={() => setIsSearchOpen(true)} cartCount={cartCount} />
       <CategoryNav
-        categories={menuData.categories}
+        categories={filteredMenuData.categories}
         activeCategory={activeCategory}
         onSelectCategory={scrollToCategory}
       />
 
       <main style={{ paddingBottom: '100px' }}>
-        {menuData.categories.map((category) => (
-          <div key={category.id} id={category.id} style={{ scrollMarginTop: '120px' }}>
-            <h2 className="section-title" style={{ marginTop: '32px', fontSize: '1.5rem' }}>{category.name}</h2>
-
-            {category.subcategories.map((sub) => (
-              <div key={sub.name}>
-                <h3 style={{
-                  padding: '16px 20px 8px',
-                  fontSize: '1.1rem',
-                  fontWeight: 600,
-                  color: 'var(--color-text-light)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.5px'
-                }}>
-                  {sub.name}
-                </h3>
-                <div>
-                  {sub.items.map((item) => (
-                    <ProductCard
-                      key={item.id}
-                      item={item}
-                      quantity={cart[item.id]?.quantity || 0}
-                      onAdd={() => handleAdd(item)}
-                      onRemove={() => handleRemove(item)}
-                    />
-                  ))}
-                </div>
-              </div>
-            ))}
+        {filteredMenuData.categories.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--color-text-light)' }}>
+            <p style={{ fontSize: '1.1rem', marginBottom: '8px' }}>No items found</p>
+            <p style={{ fontSize: '0.9rem' }}>Try searching for something else</p>
           </div>
-        ))}
+        ) : (
+          filteredMenuData.categories.map((category) => (
+            <div key={category.id} id={category.id} style={{ scrollMarginTop: '120px' }}>
+              <h2 className="section-title" style={{ marginTop: '32px', fontSize: '1.5rem' }}>{category.name}</h2>
+
+              {category.subcategories.map((sub) => (
+                <div key={sub.name}>
+                  <h3 style={{
+                    padding: '16px 20px 8px',
+                    fontSize: '1.1rem',
+                    fontWeight: 600,
+                    color: 'var(--color-text-light)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px'
+                  }}>
+                    {sub.name}
+                  </h3>
+                  <div>
+                    {sub.items.map((item) => (
+                      <ProductCard
+                        key={item.id}
+                        item={item}
+                        quantity={cart[item.id]?.quantity || 0}
+                        onAdd={() => handleAdd(item)}
+                        onRemove={() => handleRemove(item)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))
+        )}
       </main>
 
       <CartBottomBar
@@ -191,6 +229,8 @@ function App() {
           </div>
         </div>
       )}
+
+      {toast && <Toast message={toast} onClose={() => setToast(null)} />}
     </div>
   );
 }

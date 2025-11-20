@@ -1,0 +1,281 @@
+{
+    "categories": [
+        {
+            "id": "food",
+            "name": "Food",
+            "subcategories": [
+                {
+                    "name": "Virat's Favourites",
+                    "items": [
+                        {
+                            "id": "vf1",
+                            "name": "Tartar Toasts",
+                            "price": 475,
+                            "description": "Spiced toasted brioche, avocado, corn & edamame salsa, micro greens.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1541529086526-db283c563270?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "vf2",
+                            "name": "Mushroom Googly",
+                            "price": 525,
+                            "description": "Assorted wild mushrooms, cream cheese, truffle oil, served with crispy lotus stem.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1556760544-74068565f05c?q=80&w=1974&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "vf3",
+                            "name": "Avocado Tartare",
+                            "price": 525,
+                            "description": "Fresh avocado chunks, lime, coriander, chili, served with corn crackers.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "vf4",
+                            "name": "Superfood Salad",
+                            "price": 525,
+                            "description": "Quinoa, kale, pomegranate, pumpkin seeds, citrus dressing, feta cheese.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "vf5",
+                            "name": "Pearl Barley Risotto",
+                            "price": 595,
+                            "description": "Creamy barley risotto, asparagus, parmesan crisp, truffle oil.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1633964813229-5395107f446e?q=80&w=2069&auto=format&fit=crop"
+                        }
+                    ]
+                },
+                {
+                    "name": "Salads & Cold Plates",
+                    "items": [
+                        {
+                            "id": "scp1",
+                            "name": "Burrata Salad",
+                            "price": 625,
+                            "description": "Fresh burrata cheese, heirloom tomatoes, basil pesto, balsamic glaze, pine nuts.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1529312266912-b33cf6227e2f?q=80&w=1974&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "scp2",
+                            "name": "Classic Caesar Salad",
+                            "price": 495,
+                            "description": "Romaine lettuce, parmesan shavings, garlic croutons, classic caesar dressing.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "scp3",
+                            "name": "Chicken Caesar Salad",
+                            "price": 545,
+                            "description": "Grilled chicken breast, romaine lettuce, parmesan, croutons, caesar dressing.",
+                            "isVeg": false,
+                            "image": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "scp4",
+                            "name": "Greek Salad",
+                            "price": 475,
+                            "description": "Cucumber, tomato, onion, olives, feta cheese, oregano, olive oil.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1974&auto=format&fit=crop"
+                        }
+                    ]
+                },
+                {
+                    "name": "Small Plates",
+                    "items": [
+                        {
+                            "id": "sp1",
+                            "name": "Spicy Chicken Bao",
+                            "price": 545,
+                            "description": "Soft steamed bun, crispy chicken, spicy sriracha mayo, pickled cucumber.",
+                            "isVeg": false,
+                            "image": "https://images.unsplash.com/photo-1563245312-1321d7a13d6d?q=80&w=1974&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "sp2",
+                            "name": "Prawn Tempura",
+                            "price": 675,
+                            "description": "Crispy battered prawns, wasabi mayo, radish salad, soy dip.",
+                            "isVeg": false,
+                            "image": "https://images.unsplash.com/photo-1615141982880-13f55e3560bf?q=80&w=1974&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "sp3",
+                            "name": "Truffle Fries",
+                            "price": 395,
+                            "description": "Crispy french fries, truffle oil, parmesan cheese, parsley.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1573080496987-a199f8cd4058?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "sp4",
+                            "name": "Chicken Gyoza",
+                            "price": 495,
+                            "description": "Pan-seared chicken dumplings, soy ginger dip, chili oil.",
+                            "isVeg": false,
+                            "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c423c?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "sp5",
+                            "name": "Fish Tacos",
+                            "price": 575,
+                            "description": "Soft tortilla, crispy fish, slaw, chipotle mayo, lime.",
+                            "isVeg": false,
+                            "image": "https://images.unsplash.com/photo-1512838243191-e81e8f66f1f3?q=80&w=2070&auto=format&fit=crop"
+                        }
+                    ]
+                },
+                {
+                    "name": "Large Plates",
+                    "items": [
+                        {
+                            "id": "lp1",
+                            "name": "Grilled Salmon",
+                            "price": 975,
+                            "description": "Pan-seared salmon fillet, asparagus, mashed potatoes, lemon butter sauce.",
+                            "isVeg": false,
+                            "image": "https://images.unsplash.com/photo-1467003909585-2f8a7270028d?q=80&w=1974&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "lp2",
+                            "name": "Paneer Makhani",
+                            "price": 575,
+                            "description": "Cottage cheese cubes, rich tomato gravy, butter, cream, served with naan.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=1974&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "lp3",
+                            "name": "Butter Chicken",
+                            "price": 625,
+                            "description": "Classic tandoori chicken in rich tomato and butter gravy, fenugreek.",
+                            "isVeg": false,
+                            "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "lp4",
+                            "name": "Truffle Mushroom Pasta",
+                            "price": 645,
+                            "description": "Fettuccine, wild mushrooms, truffle cream sauce, parmesan.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1626844131082-256783844137?q=80&w=1935&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "lp5",
+                            "name": "Margherita Pizza",
+                            "price": 525,
+                            "description": "San Marzano tomato sauce, mozzarella di bufala, fresh basil, olive oil.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=2069&auto=format&fit=crop"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cocktails",
+            "name": "Cocktails",
+            "subcategories": [
+                {
+                    "name": "Signatures",
+                    "items": [
+                        {
+                            "id": "ck1",
+                            "name": "Commune Old Fashioned",
+                            "price": 795,
+                            "description": "Bourbon, salted caramel syrup, angostura bitters, orange peel.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "ck2",
+                            "name": "Gin Basil Smash",
+                            "price": 745,
+                            "description": "Gin, fresh basil, lemon juice, sugar syrup.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1536935338788-843bb6d8d926?q=80&w=2080&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "ck3",
+                            "name": "Spicy Margarita",
+                            "price": 745,
+                            "description": "Tequila, cointreau, lime, jalapeno, tajin rim.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1570598912132-0ba1dc952b7d?q=80&w=1974&auto=format&fit=crop"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "beverages",
+            "name": "Beverages",
+            "subcategories": [
+                {
+                    "name": "Mocktails",
+                    "items": [
+                        {
+                            "id": "m1",
+                            "name": "Virgin Mojito",
+                            "price": 295,
+                            "description": "Fresh mint, lime, sugar, soda water.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1974&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "m2",
+                            "name": "Berry Blast",
+                            "price": 325,
+                            "description": "Mixed berries, cranberry juice, lime, mint.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "m3",
+                            "name": "Peach Iced Tea",
+                            "price": 275,
+                            "description": "Brewed tea, peach syrup, lemon, mint.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=1964&auto=format&fit=crop"
+                        }
+                    ]
+                },
+                {
+                    "name": "Coffee",
+                    "items": [
+                        {
+                            "id": "c1",
+                            "name": "Espresso",
+                            "price": 195,
+                            "description": "Single shot of rich, intense coffee.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "c2",
+                            "name": "Cappuccino",
+                            "price": 225,
+                            "description": "Espresso, steamed milk, milk foam.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=2070&auto=format&fit=crop"
+                        },
+                        {
+                            "id": "c3",
+                            "name": "Iced Latte",
+                            "price": 245,
+                            "description": "Espresso, cold milk, ice cubes.",
+                            "isVeg": true,
+                            "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=1887&auto=format&fit=crop"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
